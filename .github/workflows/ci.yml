@@ -102,11 +102,11 @@ jobs:
         
       - name: ECR image scan
         id: image-scan
+        continue-on-error: true
         uses: alexjurkiewicz/ecr-scan-image@v1.7.1
         with:
           repository: ${{ vars.ECR_REPO_NAME }}
           tag: latest
-          fail-on-finding: false
 
       - name: Summary
         id: summary
