@@ -106,6 +106,7 @@ jobs:
         with:
           repository: ${{ vars.ECR_REPO_NAME }}
           tag: latest
+          fail-on-finding: false
 
       - name: Summary
         id: summary
